@@ -195,8 +195,16 @@ void pipe_shell(char* set[])
 void help()
 {
 	printf("Welcome to MyShell2018172020!\n");
-	printf("Type help to see help info.\n");
-	printf("Type run + programname + parameters to run a custom program.\n");
+	printf("Built-ins:\n");
+	printf("	help : see help info.\n");
+	printf("	exit : exit the shell program.\n");
+	printf("	test : only for test use. (no meanings)\n");
+	printf("Others:\n");
+	printf("	ls [parameters] : run command ls(same as ls).\n");
+	printf("	cp [parameters] : run command cp(same as ./).\n");
+	printf("	run [programname] [parameters...] : run a custom program(same as ./).\n");
+	printf("Piping:\n");
+	printf("	[command1] | [command2] : run piping program(same as |).\n");
 	//printf("Welcome to MyShell2018172020!\n");
 }
 
@@ -302,7 +310,7 @@ void out_command(char* set[])
 	else
 	{
 		wait();
-		printf("child end.\n");
+		//printf("child end.\n");
 	}
 }
 
